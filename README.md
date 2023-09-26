@@ -6,4 +6,4 @@ Technologies used:
 - Spring Boot
 - PostgreSQL
 - HTML/CSS
-- Javascript
+- Javascript/VUE.js
