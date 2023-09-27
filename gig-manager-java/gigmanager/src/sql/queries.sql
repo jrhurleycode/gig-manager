@@ -1,1 +1,4 @@
-Select * from gig;
+Select * from gigs;
+
+
+SELECT * FROM setlists;
