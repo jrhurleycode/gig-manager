@@ -4,7 +4,7 @@ package com.gigmanager.gigmanager.model;
 import java.time.LocalTime;
 import java.util.Date;
 
-public class gigs {
+public class Gig {
 
     private int gig_id;
     private String gig_name;
@@ -14,9 +14,9 @@ public class gigs {
     private LocalTime soundcheck_time;
     private String band_name;
 
-    public gigs() {};
+    public Gig() {};
 
-    public gigs(int gig_id, String gig_name, String venue_name, Date gig_date, LocalTime doorsopen_time, LocalTime soundcheck_time, String band_name) {
+    public Gig(int gig_id, String gig_name, String venue_name, Date gig_date, LocalTime doorsopen_time, LocalTime soundcheck_time, String band_name) {
         this.gig_id = gig_id;
         this.gig_name = gig_name;
         this.venue_name = venue_name;

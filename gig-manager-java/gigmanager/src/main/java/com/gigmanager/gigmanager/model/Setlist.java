@@ -2,14 +2,14 @@ package com.gigmanager.gigmanager.model;
 
 import java.util.List;
 
-public class setlists {
+public class Setlist {
     private int setlist_id;
     private String setlist_name;
     private List setlist_songs;
 
-    public setlists(){};
+    public Setlist(){}
 
-    public setlists(int setlist_id, String setlist_name, List setlist_songs) {
+    public Setlist(int setlist_id, String setlist_name, List setlist_songs) {
         this.setlist_id = setlist_id;
         this.setlist_name = setlist_name;
         this.setlist_songs = setlist_songs;
