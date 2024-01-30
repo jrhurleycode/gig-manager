@@ -3,23 +3,23 @@ package com.gigmanager.gigmanager.model;
 import java.util.List;
 
 public class Setlist {
-    private int setlist_id;
+    private Long setlist_id;
     private String setlist_name;
     private List setlist_songs;
 
     public Setlist(){}
 
-    public Setlist(int setlist_id, String setlist_name, List setlist_songs) {
+    public Setlist(Long setlist_id, String setlist_name, List setlist_songs) {
         this.setlist_id = setlist_id;
         this.setlist_name = setlist_name;
         this.setlist_songs = setlist_songs;
     }
 
-    public int getSetlist_id() {
+    public Long getSetlist_id() {
         return setlist_id;
     }
 
-    public void setSetlist_id(int setlist_id) {
+    public void setSetlist_id(Long setlist_id) {
         this.setlist_id = setlist_id;
     }
 

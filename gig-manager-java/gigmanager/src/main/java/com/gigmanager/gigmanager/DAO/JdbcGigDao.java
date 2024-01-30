@@ -49,7 +49,7 @@ public class JdbcGigDao implements GigDao {
 
     private Gig mapRowToGig (SqlRowSet row){
         Gig gig = new Gig();
-        gig.setGig_id(row.getInt("gig_id"));
+        gig.setGig_id(row.getLong("gig_id"));
         gig.setGig_name(row.getString("gig_name"));
         gig.setVenue_name(row.getString("venue_name"));
         gig.setGig_date(row.getDate("gig_date"));

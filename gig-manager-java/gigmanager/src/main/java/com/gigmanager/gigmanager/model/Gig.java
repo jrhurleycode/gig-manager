@@ -1,12 +1,18 @@
 package com.gigmanager.gigmanager.model;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.time.LocalTime;
 import java.util.Date;
+@Entity
 
 public class Gig {
-
-    private int gig_id;
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long gig_id;
     private String gig_name;
     private String venue_name;
     private Date gig_date;
@@ -16,7 +22,7 @@ public class Gig {
 
     public Gig() {};
 
-    public Gig(int gig_id, String gig_name, String venue_name, Date gig_date, LocalTime doorsopen_time, LocalTime soundcheck_time, String band_name) {
+    public Gig(Long gig_id, String gig_name, String venue_name, Date gig_date, LocalTime doorsopen_time, LocalTime soundcheck_time, String band_name) {
         this.gig_id = gig_id;
         this.gig_name = gig_name;
         this.venue_name = venue_name;
@@ -26,11 +32,11 @@ public class Gig {
         this.band_name = band_name;
     }
 
-    public int getGig_id() {
+    public Long getGig_id() {
         return gig_id;
     }
 
-    public void setGig_id(int gig_id) {
+    public void setGig_id(Long gig_id) {
         this.gig_id = gig_id;
     }
 
