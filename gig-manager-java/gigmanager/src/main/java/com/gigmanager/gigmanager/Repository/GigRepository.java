@@ -5,7 +5,11 @@ import org.springframework.data.repository.Repository;
 
 import java.util.Optional;
 
-public interface GigRepository extends Repository<Gig, Long> {
-    Gig save(Gig gig);
-    Optional<Gig> findById(Long id);
+public interface GigRepository<T, ID> extends Repository<Gig, Long> {
+    <Gig extends T> Gig save(Gig gig);
+    Optional<Gig> findById(ID primaryKey);
+    Iterable<T> findAll();
+    long count();
+    void delete(T entity);
+    boolean existsById(ID primaryKey);
 }

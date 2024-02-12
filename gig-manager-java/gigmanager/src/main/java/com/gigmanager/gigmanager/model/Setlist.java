@@ -1,8 +1,13 @@
 package com.gigmanager.gigmanager.model;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.util.List;
 
 public class Setlist {
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long setlist_id;
     private String setlist_name;
     private List setlist_songs;
