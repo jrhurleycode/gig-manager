@@ -1,5 +1,5 @@
 begin transaction;
-drop table if exists gig;
+drop table if exists gigs;
 DROP TABLE IF EXISTS gigs;
 DROP TABLE IF EXISTS setlists;
 
@@ -9,7 +9,7 @@ CREATE TABLE gigs (
 	gig_name varchar(50) NOT NULL,
 	venue_name varchar (50) NOT NULL,
 	gig_date date,
-	doorsOpen_time time,
+	doors_open_time time,
 	soundCheck_time time,
 	band_name varchar(50) NOT NULL,
 	CONSTRAINT pk_gig PRIMARY KEY (gig_id)
@@ -23,7 +23,7 @@ CREATE TABLE setlists (
 	CONSTRAINT pk_setlists PRIMARY KEY (setlist_id)
 );
 	
-INSERT INTO gigs (gig_name, venue_name, gig_date, doorsOpen_time, soundCheck_time, band_name)
+INSERT INTO gigs (gig_name, venue_name, gig_date, doors_open_time, soundCheck_time, band_name)
 VALUES ('Tally Ho Show', 'Tally Ho', '09/08/2024', '17:00:00', '12:00:00', 'Poopy Boobie');
 
 

@@ -1,13 +1,11 @@
 package com.gigmanager.gigmanager.Repository;
 
-import com.gigmanager.gigmanager.model.Gig;
+import com.gigmanager.gigmanager.model.Gigs;
 import org.springframework.data.repository.Repository;
 
-import java.util.Optional;
-
-public interface GigRepository<T, ID> extends Repository<Gig, Long> {
-    Gig save(Gig gig);
-    Optional<Gig> findById(ID primaryKey);
+public interface GigRepository<T, ID> extends Repository<Gigs, Long> {
+    Gigs save(Gigs gigs);
+    Gigs findById(Long primaryKey);
     Iterable<T> findAll();
     long count();
     void delete(T entity);

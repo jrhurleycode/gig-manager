@@ -1,12 +1,9 @@
 package com.gigmanager.gigmanager.Service;
 
 import com.gigmanager.gigmanager.Repository.GigRepository;
-import com.gigmanager.gigmanager.model.Gig;
+import com.gigmanager.gigmanager.model.Gigs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class GigService {
@@ -17,11 +14,15 @@ public class GigService {
         this.repository = repository;
     }
 
-public Gig create (Gig gig){
-        return repository.save(gig);
+public Gigs create (Gigs gigs){
+        return repository.save(gigs);
 }
 
 public Object findAllGigs(){
         return repository.findAll();
+}
+
+public Gigs findGigById(Long id) {
+        return repository.findById(id);
 }
 }

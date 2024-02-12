@@ -8,26 +8,26 @@ import jakarta.persistence.Id;
 
 import java.time.LocalTime;
 import java.util.Date;
-@Entity
 
-public class Gig {
+@Entity
+public class Gigs {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long gig_id;
     private String gig_name;
     private String venue_name;
     private Date gig_date;
-    private LocalTime doorsOpen_time;
+    private LocalTime doors_open_time;
     private LocalTime soundcheck_time;
     private String band_name;
 
-    public Gig() {};
+    public Gigs() {};
 
-    public Gig(Long gig_id, String gig_name, String venue_name, Date gig_date, LocalTime doorsopen_time, LocalTime soundcheck_time, String band_name) {
+    public Gigs(Long gig_id, String gig_name, String venue_name, Date gig_date, LocalTime doors_open_time, LocalTime soundcheck_time, String band_name) {
         this.gig_id = gig_id;
         this.gig_name = gig_name;
         this.venue_name = venue_name;
         this.gig_date = gig_date;
-        this.doorsOpen_time = doorsopen_time;
+        this.doors_open_time = doors_open_time;
         this.soundcheck_time = soundcheck_time;
         this.band_name = band_name;
     }
@@ -64,12 +64,12 @@ public class Gig {
         this.gig_date = gig_date;
     }
 
-    public LocalTime getDoorsOpen_time() {
-        return doorsOpen_time;
+    public LocalTime getDoors_open_time() {
+        return doors_open_time;
     }
 
-    public void setDoorsOpen_time(LocalTime doorsOpen_time) {
-        this.doorsOpen_time = doorsOpen_time;
+    public void setDoors_open_time(LocalTime doors_open_time) {
+        this.doors_open_time = doors_open_time;
     }
 
     public LocalTime getSoundcheck_time() {

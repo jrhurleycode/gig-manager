@@ -1,6 +1,5 @@
 package com.gigmanager.gigmanager.Repository;
 
-import com.gigmanager.gigmanager.model.Gig;
 import com.gigmanager.gigmanager.model.Setlist;
 import org.springframework.data.repository.Repository;
 
