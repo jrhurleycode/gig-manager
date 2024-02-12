@@ -6,7 +6,7 @@ import org.springframework.data.repository.Repository;
 import java.util.Optional;
 
 public interface GigRepository<T, ID> extends Repository<Gig, Long> {
-    <Gig extends T> Gig save(Gig gig);
+    Gig save(Gig gig);
     Optional<Gig> findById(ID primaryKey);
     Iterable<T> findAll();
     long count();
