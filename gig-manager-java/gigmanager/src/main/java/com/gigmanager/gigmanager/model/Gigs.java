@@ -11,7 +11,7 @@ import java.util.Date;
 
 @Entity
 public class Gigs {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long gig_id;
     private String gig_name;
     private String venue_name;

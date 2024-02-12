@@ -2,10 +2,7 @@ package com.gigmanager.gigmanager.Controller;
 
 import com.gigmanager.gigmanager.Service.GigService;
 import com.gigmanager.gigmanager.model.Gigs;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/gig")
@@ -16,7 +13,7 @@ public class GigController {
         this.service = service;
     }
 
-    @RequestMapping(path = "/", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public Object getAllGigs (){
         return service.findAllGigs();
     }
@@ -24,5 +21,10 @@ public class GigController {
     @RequestMapping(path = "/{id}", method = RequestMethod.GET)
     public Gigs findGigById(@PathVariable Long id){
         return service.findGigById(id);
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public Gigs createGig (@RequestBody Gigs gig){
+        return service.createGig(gig);
     }
 }

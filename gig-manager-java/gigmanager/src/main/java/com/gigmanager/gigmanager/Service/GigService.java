@@ -24,5 +24,9 @@ public Object findAllGigs(){
 
 public Gigs findGigById(Long id) {
         return repository.findById(id);
-}
+    }
+
+public Gigs createGig (Gigs gig){
+        return repository.save(gig);
+    }
 }
