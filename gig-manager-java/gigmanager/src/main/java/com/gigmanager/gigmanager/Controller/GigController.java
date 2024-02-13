@@ -4,6 +4,7 @@ import com.gigmanager.gigmanager.Service.GigService;
 import com.gigmanager.gigmanager.model.Gigs;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/gig")
 public class GigController {
