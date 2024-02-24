@@ -7,6 +7,7 @@ export default {
       gigId: '',
       gigs: [],
       newGig: {
+        gig_id: "",
         band_name: '',
         gig_name: '',
         venue_name: '',
@@ -89,6 +90,7 @@ export default {
   </form>
   <ul>
     <li v-for="gig in gigs" v-bind:key="gig.gig_id">
+      <p>Gig ID: {{ gig.gig_id }}</p>
       <p>Band: {{ gig.band_name }}</p>
       <p>Show name: {{ gig.gig_name }}</p>
       <p>Venue Name: {{ gig.venue_name }}</p>
