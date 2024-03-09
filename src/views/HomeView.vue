@@ -1,10 +1,10 @@
 <script setup>
-import Gigs from '../components/Gigs.vue'
+import GigsComponent from '../components/GigsComponent.vue'
 </script>
 
 <template>
   <main>
-    <Gigs />
+    <GigsComponent />
     
   </main>
 </template>
