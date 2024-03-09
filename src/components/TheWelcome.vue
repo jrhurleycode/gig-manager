@@ -2,6 +2,13 @@
 import gigService from '../service/gigService'
 
 export default {
+  created() {
+    this.gigs = []
+
+    gigService.listAllGigs().then((response) => {
+      this.gigs = response.data
+    })
+  },
   data() {
     return {
       gigId: '',
@@ -19,13 +26,18 @@ export default {
   methods: {
     loadAllGigs() {
       this.gigs = []
-      console.log('tests')
+
       gigService.listAllGigs().then((response) => {
         this.gigs = response.data
-        console.log('test')
       })
     },
     loadGigById(id) {
+      const gigExists = this.gigs.some((gig) => gig.gig_id === id)
+      if (!gigExists) {
+        alert('no gig   with this id')
+        return
+      }
+
       this.gigs = []
       gigService
         .getGigById(id)
