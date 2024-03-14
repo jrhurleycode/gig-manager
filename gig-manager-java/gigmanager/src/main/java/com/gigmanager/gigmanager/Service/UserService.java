@@ -3,7 +3,9 @@ package com.gigmanager.gigmanager.Service;
 import com.gigmanager.gigmanager.Repository.UserRepository;
 import com.gigmanager.gigmanager.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserService {
     private final UserRepository repository;
 

@@ -2,7 +2,6 @@ package com.gigmanager.gigmanager.Controller;
 
 import com.gigmanager.gigmanager.Service.UserService;
 import com.gigmanager.gigmanager.model.User;
-import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,7 +22,7 @@ public class UserController {
         return service.login(user);
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(path = "/register", method = RequestMethod.POST)
     public User register(User user) {
         return service.create(user);
     }

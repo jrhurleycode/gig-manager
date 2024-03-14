@@ -1,11 +1,11 @@
 package com.gigmanager.gigmanager.model;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-import javax.annotation.processing.Generated;
-
+@Entity
 public class User {
 
     @Id
@@ -16,6 +16,10 @@ public class User {
     private String band_name;
     private String authorization;
 
+    public User() {
+    }
+
+    ;
 
     public User(Long user_Id, String username, String password, String band_name, String authorization) {
         this.user_Id = user_Id;
