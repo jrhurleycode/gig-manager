@@ -17,11 +17,11 @@ public class UserService {
         return repository.save(user);
     }
 
-    ;
-
 
     // login user
-
+    public boolean login(User user) {
+        return repository.existsById(user.getUser_Id());
+    }
 
     // delete user....as admin??
     public void deleteById(Long id) {

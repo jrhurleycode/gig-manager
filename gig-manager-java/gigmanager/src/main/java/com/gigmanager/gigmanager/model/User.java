@@ -14,12 +14,15 @@ public class User {
     private String username;
     private String password;
     private String band_name;
+    private String authorization;
 
-    public User(Long user_Id, String username, String password, String band_name) {
+
+    public User(Long user_Id, String username, String password, String band_name, String authorization) {
         this.user_Id = user_Id;
         this.username = username;
         this.password = password;
         this.band_name = band_name;
+        this.authorization = authorization;
     }
 
     public Long getUser_Id() {
@@ -52,5 +55,13 @@ public class User {
 
     public void setBand_name(String band_name) {
         this.band_name = band_name;
+    }
+
+    public String getAuthorization() {
+        return authorization;
+    }
+
+    public void setAuthorization(String authorization) {
+        this.authorization = authorization;
     }
 }
