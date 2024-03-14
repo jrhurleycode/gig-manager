@@ -5,16 +5,16 @@ export default {
   created() {
     this.gigs = []
 
-    gigService.listAllGigs().then((response) => {
-      this.gigs = response.data
-    })
+    // gigService.listAllGigs().then((response) => {
+    //   this.gigs = response.data
+    // })
   },
   data() {
     return {
       gigId: '',
       gigs: [],
       newGig: {
-        gig_id: "",
+        gig_id: '',
         band_name: '',
         gig_name: '',
         venue_name: '',
@@ -72,7 +72,7 @@ export default {
 </script>
 
 <template>
-  <h1>Hello World!</h1>
+  <h1>Welcome to GigManager!</h1>
 
   <button v-on:click="loadAllGigs">Get all gigs</button>
   <form action="" method="get" v-on:submit.prevent="loadGigById(gigId)">
