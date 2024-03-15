@@ -10,31 +10,39 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long user_Id;
+    private Long user_id;
     private String username;
     private String password;
     private String band_name;
-    private String authorization;
+    private String authorize;
+    private boolean enabled;
 
     public User() {
     }
 
     ;
 
-    public User(Long user_Id, String username, String password, String band_name, String authorization) {
-        this.user_Id = user_Id;
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public User(Long user_id, String username, String password, String band_name, String authorize, boolean enabled) {
+        this.user_id = user_id;
         this.username = username;
         this.password = password;
         this.band_name = band_name;
-        this.authorization = authorization;
+        this.authorize = authorize;
+        this.enabled = enabled;
+
     }
 
-    public Long getUser_Id() {
-        return user_Id;
+    public Long getUser_id() {
+        return user_id;
     }
 
-    public void setUser_Id(Long user_Id) {
-        this.user_Id = user_Id;
+    public void setUser_id(Long user_id) {
+        this.user_id = user_id;
     }
 
     public String getUsername() {
@@ -61,11 +69,19 @@ public class User {
         this.band_name = band_name;
     }
 
-    public String getAuthorization() {
-        return authorization;
+    public String getAuthorize() {
+        return authorize;
     }
 
-    public void setAuthorization(String authorization) {
-        this.authorization = authorization;
+    public void setAuthorize(String authorize) {
+        this.authorize = authorize;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 }

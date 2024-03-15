@@ -22,7 +22,9 @@ public class UserService {
 
     // login user
     public boolean login(User user) {
-        return repository.existsById(user.getUser_Id());
+        System.out.println(user.getUser_id());
+        return repository.existsById(user.getUser_id());
+
     }
 
     // delete user....as admin??

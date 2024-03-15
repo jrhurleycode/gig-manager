@@ -2,14 +2,12 @@ package com.gigmanager.gigmanager.Controller;
 
 import com.gigmanager.gigmanager.Service.UserService;
 import com.gigmanager.gigmanager.model.User;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin
+
 @RestController
 @RequestMapping("/login")
+@CrossOrigin
 public class UserController {
     private final UserService service;
 
@@ -18,7 +16,7 @@ public class UserController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public boolean login(User user) {
+    public boolean login(@RequestBody User user) {
         return service.login(user);
     }
 
